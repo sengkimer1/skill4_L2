@@ -4,14 +4,21 @@ body {
 #container{
     width: 95%;
     margin: 0 auto;
-   
+}
+body{
+  background-color:#d4f4db;
+}
+
+#container {
+  width: 95%;
+  margin: 0 auto;
+
 }
 .main{
     width: 100%;
     height: auto;
     display: flex;
 }
-
 .Menu {
   flex: 1;
 }
@@ -40,7 +47,28 @@ body {
   align-items: center;
 }
 
-.Dropdown {
+#detail{
+    flex: 4;
+    padding: 27px;
+}
+.btn{
+    padding: 10px;
+    border: 1px solid black;
+  }
+  .postbox{
+    width: 50%;
+    overflow: hidden;
+  }
+  .box{
+    width: 90%;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.Dropdown{
   display: flex;
   justify-content: flex-end;
 }
