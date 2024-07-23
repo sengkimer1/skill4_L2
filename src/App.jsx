@@ -1,27 +1,19 @@
-import { Outlet } from "react-router-dom";
-import Menu from "./components/Menu";
-import Slider from "./components/Slider";
-import Footer from "./components/Footer"
-import "./styles/App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import CropPage from "./pages/Croppage";
+import CropTypePage from "./pages/CropTypepage";
 
-export default function Root() {
+
+const App = () => {
   return (
-     <div id="container">
-         <div className="header">
-          <Slider />
-          </div>
-          
-         <div className="main">
-         <div className="Menu"><Menu /></div>
-         
-         <div id="detail"><Outlet /></div>
-        </div>
-        
-       
-      </div>
-   
+    <Router>
+      <Sidebar />
+      <Routes>
+        <Route path="/crop" element={<CropPage />} />
+        <Route path="/croptype" element={<CropTypePage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
-
-
+export default App;

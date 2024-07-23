@@ -1,47 +1,41 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Farmers from "./pages/Farmer";
-import Account from "./pages/Accounts";
-import "./index.css";
-import App from "./App";
-import Farmland from "./pages/Farmland";
-import Cropcycles from "./pages/Crop-cycles";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <h1>Oop! Error!</h1>,
-    children: [
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
-      {
-        path: "/farmers",
-        element: <Farmers />,
-      },
-      {
-        path: "/farmlands",
-        element: <Farmland />,
-      },
-      {
-        path: "/account",
-        element: <Account />,
-      },
-
-      { path: "/crop cylces",
-       element: <Cropcycles /> },
-
-    ],
-  },
-]);
-
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import App from './App';
+// import Crop from './components/Crop';
+// import CropType from './components/CropType';
+// import './index.css';
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//     errorElement: <h1>Oop! Error!</h1>,
+//     children: [
+//       {
+//         path: "/Crop",
+//         element: <Crop />,
+//       },
+//       {
+//         path: "/CropType",
+//         element: <CropType />,
+//       },
+//     ],
+//   },
+// ]);
+
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <RouterProvider router={router} />
+//   </React.StrictMode>
+// );
